@@ -1,0 +1,1 @@
+// GET /notes should return the notes.html file.
