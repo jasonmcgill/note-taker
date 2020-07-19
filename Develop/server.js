@@ -4,6 +4,7 @@ let db = require('./db/db.json');
 const path = require('path');
 const fs = require('fs');
 var uniqid = require('uniqid');
+const PORT = process.env.PORT || 3001;
 
 
 app.use('/static', express.static(__dirname + '/public'));
@@ -52,6 +53,6 @@ app.delete('/api/notes/:id', (req, res) => {
 
 });
 
-app.listen(3001, () => {
-    console.log(`API server now on port 3001!`);
-});
+app.listen(PORT, () => {
+    console.log(`API server now on port ${PORT}!`);
+  });
