@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/jasonmcgill/note-taker#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "uniqid": "^5.2.0"
   }
 }
