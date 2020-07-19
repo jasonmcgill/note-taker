@@ -29,7 +29,7 @@ app.post('/api/notes', (req, res) => {
     db.push(newNote);
     
     fs.writeFile('./db/db.json', JSON.stringify(db), () => {
-        res.json(db)
+        res.json(newNote)
     });
     
 })
@@ -38,7 +38,17 @@ app.post('/api/notes', (req, res) => {
 app.delete('/api/notes/:id', (req, res) => {
     let deleteId = req.params.id
 
-    
+    function checkDb(note) {
+        return deleteId == note.id
+    }
+
+    let foundIndex = db.findIndex(checkDb);
+
+    db.splice(foundIndex, 1);
+
+    fs.writeFile('./db/db.json', JSON.stringify(db), () => {
+        res.sendStatus(200);
+    });
 
 });
 
