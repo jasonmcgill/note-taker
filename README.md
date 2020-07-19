@@ -9,7 +9,6 @@ This is a website for a user to be able to take notes and save them
 
 ## Table of Contents
 
-* [Instructions](#installation-instructions)
 * [Usage](#usage)
 
 
@@ -19,12 +18,9 @@ This is a website for a user to be able to take notes and save them
 
 
 
-## Installation-Instructions 
-Use this website to enter in notes and save/delete them at your will. Start by typing in the open text areas and hitting save
-  
 
 ## Usage
-n/a
+Use this website to enter in notes and save/delete them at your will. Start by typing in the open text areas and hitting save
 
 
 
