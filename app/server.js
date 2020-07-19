@@ -6,29 +6,33 @@ const fs = require('fs');
 var uniqid = require('uniqid');
 const PORT = process.env.PORT || 3001;
 
-
+//middleware to use static file paths
 app.use('/static', express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+//path for looking at the notes api
 app.get('/api/notes', (req, res) => {
     res.json(db);
 });
 
+//path for home page
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
-
+//path for looking at notes
 app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, './public/notes.html'));
 });
 
+//path for posting to notes
 app.post('/api/notes', (req, res) => {
+    //creates new object
     let newNote = {"title": req.body.title, "text": req.body.text, "id": uniqid()}
-
+    //pushes new object to global object
     db.push(newNote);
-    
+    //overwrites the db file
     fs.writeFile('./db/db.json', JSON.stringify(db), () => {
         res.json(newNote)
     });
