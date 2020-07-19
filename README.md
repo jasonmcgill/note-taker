@@ -23,7 +23,14 @@ This is a website for a user to be able to take notes and save them
 Use this website to enter in notes and save/delete them at your will. Start by typing in the open text areas and hitting save
 
 
+## Screenshot of entire website
+![homepage](https://raw.githubusercontent.com/jasonmcgill/note-taker/master/app/public/assets/screenshots/mainpage.JPG)
 
+## After you click into 'Get Started'
+![add tasks](https://raw.githubusercontent.com/jasonmcgill/note-taker/master/app/public/assets/screenshots/blanknotes.JPG)
+
+## After adding tasks
+![tasks added](https://raw.githubusercontent.com/jasonmcgill/note-taker/master/app/public/assets/screenshots/filled%20out.JPG)
 
 
 
